@@ -72,7 +72,7 @@ cd gcc-build
       --disable-shared --disable-threads --disable-multilib \
       --enable-languages=c
 
-make CFLAGS="-O2" all-gcc
+make CFLAGS="-O2 -std=gnu89" all-gcc
 
 # install gcc
 make install-gcc
