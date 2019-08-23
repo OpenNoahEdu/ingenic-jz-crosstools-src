@@ -1,0 +1,4 @@
+This directory contains scripts and necessary files for
+constructing the cross toolchain of Ingenic.
+
+Review build-mips-cross-tools.sh for detailed information.
