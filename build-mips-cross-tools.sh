@@ -115,6 +115,14 @@ echo '4282c4282
 ---
 >     3.79* | 3.[89]* | 4.*)' | patch -N ../${GLIBC_VER}/configure
 
+echo '235c235,238
+< $(objpfx)stubs ../po/manual.pot $(objpfx)stamp%:
+---
+> $(objpfx)stubs ../po/manual.pot:
+>       $(make-target-directory)
+>       touch $@
+> $(objpfx)stamp%:' | patch -N ../glibc-2.6.1/manual/Makefile
+
 BUILD_CC="gcc" CC="mipsel-linux-gcc" \
     AR="mipsel-linux-ar" RANLIB="mipsel-linux-ranlib" \
     ../${GLIBC_VER}/configure --prefix=/usr \
