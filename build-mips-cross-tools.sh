@@ -44,7 +44,7 @@ mkdir -v binutils-build
 cd binutils-build
 
 ../${BINUTILS_VER}/configure --target=mipsel-linux --prefix=${INSTALL_PATH}
-make CFLAGS="-O2 -w"
+make CFLAGS="-O2 -std=gnu89 -w"
 
 # install binutils
 make install
