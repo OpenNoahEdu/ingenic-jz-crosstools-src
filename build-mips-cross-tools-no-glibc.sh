@@ -73,3 +73,9 @@ make CFLAGS="-O2 -std=gnu89" all-gcc
 
 # install gcc
 make install-gcc
+
+echo "----------------------------------------------------"
+echo "@@ Building binutils/gcc done @@"
+echo "----------------------------------------------------"
+
+echo "You can run: PATH=$PATH:/opt/mipseltools-gcc412/bin/"
