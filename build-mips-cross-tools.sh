@@ -113,7 +113,7 @@ echo "libc_cv_mips_tls=yes" >> config.cache
 echo '4282c4282
 <     3.79* | 3.[89]*)
 ---
->     3.79* | 3.[89]* | 4.*)' | patch ../${GLIBC_VER}/configure
+>     3.79* | 3.[89]* | 4.*)' | patch -N ../${GLIBC_VER}/configure
 
 BUILD_CC="gcc" CC="mipsel-linux-gcc" \
     AR="mipsel-linux-ar" RANLIB="mipsel-linux-ranlib" \
