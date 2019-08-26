@@ -8,10 +8,10 @@
 #
 
 # Change ${INSTALL_PATH} to yours
-INSTALL_PATH=/opt/mipseltools-gcc412
+INSTALL_PATH=~/opt/mipseltools-gcc412
 
 # Build and sources paths
-BUILD_PATH=`pwd`
+BUILD_PATH=`pwd`/build
 SOURCES_PATH=`pwd`
 
 BINUTILS_SOURCES_PATH=${SOURCES_PATH}/binutils
@@ -32,6 +32,7 @@ echo "@@ Building binutils ..."
 echo "--------------------------------------"
 
 # prepare binutils source
+mkdir -p ${BUILD_PATH}
 cd ${BUILD_PATH}
 rm -rf ${BINUTILS_VER} binutils-build
 tar jxf ${BINUTILS_SOURCES_PATH}/${BINUTILS_VER}.tar.bz2
@@ -78,4 +79,5 @@ echo "----------------------------------------------------"
 echo "@@ Building binutils/gcc done @@"
 echo "----------------------------------------------------"
 
-echo "You can run: PATH=$PATH:/opt/mipseltools-gcc412/bin/"
+echo "You can run: "
+echo "echo 'PATH=\$PATH:$INSTALL_PATH/bin/' >> ~/.zshrc"
